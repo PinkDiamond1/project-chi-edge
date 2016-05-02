@@ -1,6 +1,6 @@
 import gulp from 'gulp';
 
-import SystemJSBuilder from 'systemjs-builder';
+import jspm from 'jspm';
 import del from 'del';
 // import vfs from 'vinyl-fs';
 // var karma = require('karma').server;
@@ -92,7 +92,7 @@ gulp.task('symlink:data', () => {
 });
 
 gulp.task('builder', [], () => {
-  const builder = new SystemJSBuilder(paths.temp, `${paths.temp}/system.config.js`);
+  const builder = new jspm.Builder(paths.temp, `${paths.temp}/system.config.js`);
 
   // var builder = new jspm.Builder({baseURL: path.temp});
 

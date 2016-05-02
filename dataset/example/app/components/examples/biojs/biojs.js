@@ -8,8 +8,6 @@ function controller () {
   const $ctrl = this;
   const $el = document.getElementById('_examples_biojs__viewer');
 
-  console.log(Fasta.parse($ctrl.dataPackage.resources[0].content));
-
   Object.assign($ctrl, {
     editorOptions: {
       data: $ctrl.dataPackage,
