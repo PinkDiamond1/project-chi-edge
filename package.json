@@ -75,7 +75,7 @@
       "angular-ui/bootstrap-bower": "github:angular-ui/bootstrap-bower@^0.13.4",
       "assert": "github:jspm/nodelibs-assert@^0.2.0-alpha",
       "babyparse": "npm:babyparse@^0.4.3",
-      "biojs-io-fasta": "npm:biojs-io-fasta@^0.1.14",
+      "biojs-io-fasta": "npm:biojs-io-fasta@^0.1.15",
       "biojs-io-parser": "npm:biojs-io-parser@^1.0.0",
       "biojs-vis-example": "npm:biojs-vis-example@^0.1.4",
       "blobjs": "github:eligrey/Blob.js@master",

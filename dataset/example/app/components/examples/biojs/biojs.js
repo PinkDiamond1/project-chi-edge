@@ -1,6 +1,6 @@
 // import biovisexpressionbar from 'expression-bar';
 import biovisexample from 'biojs-vis-example';
-import Fasta from 'biojs-io-fasta';
+import Fasta from 'biojs-io-fasta/lib/fasta';
 
 import './biojs.css!';
 
