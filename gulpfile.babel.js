@@ -3,4 +3,6 @@
 import requireDir from 'require-dir';
 
 // require all tasks
-requireDir('./gulp/tasks', {recurse: true});
+import './gulp/tasks/build';
+import './gulp/tasks/server';
+// requireDir('./gulp/tasks', {recurse: true});

@@ -2,10 +2,13 @@
 
 _\( managed using [todo-md](https://github.com/Hypercubed/todo-md) \)_
 
-- [x] css-minify
-- [-] ng-annotate (using decorators)
-- [-] ngHtml2Js (use systemjs/plugin-text)
+- [ ] html minify?
 - [ ] tests
 - [ ] Fix printing
-- [ ] Bundle dataPackages (use systemjs/plugin-json?)
-- [ ] Add watch to server:dist
+- [ ] Add watch to dist
+- [ ] Make symlinking data more configurable
+- [x] jspm 0.17
+- [x] gulp 4.0
+- [ ] Angular 2
+- [ ] Bootstrap 4 (flexbox)
+- [ ] Replace bootstrap glyphs with font-awesome
