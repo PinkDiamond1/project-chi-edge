@@ -17,7 +17,7 @@ const config = {
     base: 'app',
     dist: 'dist',
     temp: '.tmp',
-    build: 'components/boot',
+    build: 'components/boot.js',
     systemConfig: 'app/system.config.js',
     bundle: 'dist/components/bundle.js',
     dataset: dataSetPath,

@@ -109,7 +109,7 @@ SystemJS.config({
     "screenfull": "npm:screenfull@2.0.0",
     "stream": "github:jspm/nodelibs-stream@0.2.0-alpha",
     "string_decoder": "github:jspm/nodelibs-string_decoder@0.2.0-alpha",
-    "text": "github:systemjs/plugin-text@0.0.2",
+    "text": "github:systemjs/plugin-text@0.0.8",
     "tls": "github:jspm/nodelibs-tls@0.2.0-alpha",
     "tty": "github:jspm/nodelibs-tty@0.2.0-alpha",
     "tweetnacl": "npm:tweetnacl@0.13.3",

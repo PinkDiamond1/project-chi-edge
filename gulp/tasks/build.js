@@ -18,8 +18,9 @@ gulp.task('resources', () => {
   return gulp.src(paths.resources, {followSymlinks: true})
     .pipe(cached('copy'))
     .pipe(plumber())
-    .pipe(gulp.dest(paths.temp))
-    .pipe(gulp.dest(paths.dist));
+    // .pipe(gulp.dest(paths.temp))
+    .pipe(gulp.dest(paths.dist))
+    .pipe(gulp.dest(`${paths.dist}/app`));   // systemjs-plugin-css relative urls issue
 });
 
 // copy data to distribution folder
@@ -91,8 +92,6 @@ gulp.task('symlink-data', () => {
 gulp.task('builder', () => {
   const builder = new jspm.Builder(paths.temp, `${paths.temp}/system.config.js`);
 
-  // var builder = new jspm.Builder({baseURL: path.temp});
-
   builder.config({
     buildCSS: true,
     buildHTML: true
@@ -103,7 +102,8 @@ gulp.task('builder', () => {
     minify: true,
     mangle: true,
     runtime: false,
-    esOptimize: true
+    esOptimize: true,
+    cssOptimize: true
     /* inject: true */
   });
 });
@@ -118,7 +118,7 @@ gulp.task('copy', gulp.parallel('resources', 'js', 'css', 'data', 'html'));
 gulp.task('build', gulp.series(
   'clean',
   'copy',
-  'symlink',
+  // 'symlink',
   'builder',
   'bundles'
 ));
