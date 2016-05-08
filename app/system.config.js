@@ -7,7 +7,7 @@ SystemJS.config({
     ]
   },
   buildCSS: true,
-  separateCSS: true,
+  separateCSS: false,
   buildHTML: true,
   packages: {
     "": {
@@ -34,7 +34,10 @@ SystemJS.config({
     "github:*/*.json"
   ],
   map: {
-    "model-js": "npm:model-js@0.2.4",
+    "chiasm-charts": "npm:chiasm-charts@0.1.5",
+    "font-awesome": "npm:font-awesome@4.6.1",
+    "intro": "npm:intro.js@2.1.0",
+    "model-js": "github:curran/model@0.2.5",
     "biojs-io-parser": "npm:biojs-io-parser@1.0.0",
     "FileSaver": "github:eligrey/FileSaver.js@master",
     "URIjs": "npm:URIjs@1.16.1",
@@ -74,7 +77,7 @@ SystemJS.config({
     "crossfilter": "github:square/crossfilter@1.3.12",
     "crypto": "github:jspm/nodelibs-crypto@0.2.0-alpha",
     "css": "github:systemjs/plugin-css@0.1.21",
-    "d3": "npm:d3@3.5.16",
+    "d3": "npm:d3@3.5.17",
     "d3-plugins": "github:d3/d3-plugins@master",
     "d3-svg-legend": "npm:d3-svg-legend@1.10.0",
     "d3-tip": "github:Caged/d3-tip@0.6.7",
@@ -88,8 +91,6 @@ SystemJS.config({
     "http": "github:jspm/nodelibs-http@0.2.0-alpha",
     "https": "github:jspm/nodelibs-https@0.2.0-alpha",
     "inlet": "github:enjalot/Inlet@0.1.8",
-    "intro": "npm:intro.js@2.1.0",
-    "intro.js": "npm:intro.js@2.1.0",
     "jodid25519": "npm:jodid25519@1.0.2",
     "jquery": "npm:jquery@2.2.3",
     "jsbn": "npm:jsbn@0.1.0",
@@ -98,7 +99,6 @@ SystemJS.config({
     "lodash": "npm:lodash@3.10.1",
     "md": "github:guybedford/system-md@0.1.0",
     "mime-lookup": "npm:mime-lookup@0.0.2",
-    "model": "npm:model-js@0.2.4",
     "net": "github:jspm/nodelibs-net@0.2.0-alpha",
     "path": "github:jspm/nodelibs-path@0.2.0-alpha",
     "plugin-babel": "npm:systemjs-plugin-babel@0.0.9",
@@ -155,6 +155,14 @@ SystemJS.config({
         "supports-color": "npm:supports-color@2.0.0"
       }
     },
+    "npm:chiasm-charts@0.1.5": {
+      "map": {
+        "chiasm-component": "npm:chiasm-component@0.2.3",
+        "chiasm-dataset": "npm:chiasm-dataset@0.1.1",
+        "d3": "npm:d3@3.5.17",
+        "model-js": "npm:model-js@0.2.4"
+      }
+    },
     "npm:combined-stream@1.0.5": {
       "map": {
         "delayed-stream": "npm:delayed-stream@1.0.0"
@@ -173,6 +181,11 @@ SystemJS.config({
     "npm:dashdash@1.13.1": {
       "map": {
         "assert-plus": "npm:assert-plus@1.0.0"
+      }
+    },
+    "npm:font-awesome@4.6.1": {
+      "map": {
+        "css": "github:systemjs/plugin-css@0.1.21"
       }
     },
     "npm:form-data@1.0.0-rc4": {
@@ -358,7 +371,7 @@ SystemJS.config({
     },
     "npm:d3plus-text@0.3.1": {
       "map": {
-        "d3": "npm:d3@3.5.16"
+        "d3": "npm:d3@3.5.17"
       }
     },
     "github:twbs/bootstrap@3.3.6": {
@@ -465,7 +478,7 @@ SystemJS.config({
     },
     "npm:biojs-vis-example@0.1.4": {
       "map": {
-        "d3": "npm:d3@3.5.16"
+        "d3": "npm:d3@3.5.17"
       }
     },
     "npm:browserify-aes@1.0.6": {
@@ -529,7 +542,7 @@ SystemJS.config({
     "npm:chiasm-layout@0.2.4": {
       "map": {
         "chiasm-component": "npm:chiasm-component@0.2.3",
-        "d3": "npm:d3@3.5.16",
+        "d3": "npm:d3@3.5.17",
         "lodash": "npm:lodash@3.10.1",
         "model-js": "npm:model-js@0.2.4"
       }

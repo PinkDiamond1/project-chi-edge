@@ -79,9 +79,7 @@ const config = {
     }
   },
   deploy: {
-    ghPages: {
-      branch: 'gh-pages'
-    }
+    // empty to avoid accidental deploy
   }
 };
 

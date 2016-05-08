@@ -1,6 +1,7 @@
 import gulp from 'gulp';
 
 import jspm from 'jspm';
+import SystemJSBuilder from 'systemjs-builder';
 import del from 'del';
 import cached from 'gulp-cached';
 import plumber from 'gulp-plumber';
@@ -20,7 +21,8 @@ gulp.task('resources', () => {
     .pipe(plumber())
     // .pipe(gulp.dest(paths.temp))
     .pipe(gulp.dest(paths.dist))
-    .pipe(gulp.dest(`${paths.dist}/app`));   // systemjs-plugin-css relative urls issue
+    // .pipe(gulp.dest(`${paths.dist}/app`))
+    ;   // systemjs-plugin-css relative urls issue
 });
 
 // copy data to distribution folder
@@ -39,7 +41,7 @@ gulp.task('html', () => {
       spare: true,
       quotes: true
     })) */
-    .pipe(gulp.dest(paths.temp))
+    // .pipe(gulp.dest(paths.temp))
     .pipe(gulp.dest(paths.dist));
 });
 
@@ -58,67 +60,71 @@ gulp.task('js', () => {
     .pipe(ngAnnotate({
       sourceType: 'module'
     })) */
-    .pipe(gulp.dest(paths.temp));
+    .pipe(gulp.dest(paths.dist));
 });
 
 // copy bundles to dist folder
-gulp.task('bundles', () => {
+/* gulp.task('bundles', () => {
   return gulp.src(`${paths.temp}/components/bundle.*`, {base: paths.temp})
     // .pipe(cached('bundle'))
     // .pipe(plumber())
     .pipe(gulp.dest(paths.dist));
-});
+}); */
 
 // copy css to temp folder
 gulp.task('css', () => {
   return gulp.src(paths.styles)
     .pipe(cached('styles'))
     .pipe(plumber())
-    .pipe(gulp.dest(paths.temp));
+    .pipe(gulp.dest(paths.dist));
 });
 
 // symlink jspm_packages into temp folder to avoid copy
-gulp.task('symlink-jspm', () => {
+/* gulp.task('symlink-jspm', () => {
   return gulp.src(paths.jspmLink, {followSymlinks: false, buffer: false, allowEmpty: true})
     .pipe(gulp.symlink(`${paths.temp}/jspm_packages`, {force: true}));
-});
+}); */
 
 // symlink data into temp folder to avoid copy
 gulp.task('symlink-data', () => {
   return gulp.src(paths.dataLink, {followSymlinks: false, buffer: false, allowEmpty: true})
-    .pipe(gulp.symlink(`${paths.dist}/data`, {force: true}));
+    .pipe(gulp.symlink(`${paths.dist}`, {force: true}));
 });
 
-gulp.task('builder', () => {
-  const builder = new jspm.Builder(paths.temp, `${paths.temp}/system.config.js`);
+gulp.task('jspm-builder', () => {
+  const builder = new jspm.Builder(paths.dist);
 
   builder.config({
     buildCSS: true,
-    buildHTML: true
+    buildHTML: true,
+    rootURL: 'app/components/bundle.css',
+    separateCSS: false
   });
 
-  return builder.bundle(paths.build, `${paths.temp}/components/bundle.js`, {
+  // console.log(builder);
+
+  return builder.bundle('components/boot.js', `${paths.dist}/components/bundle.js`, {
     sourceMaps: true,
     minify: true,
     mangle: true,
     runtime: false,
     esOptimize: true,
-    cssOptimize: true
-    /* inject: true */
+    cssOptimize: true,
+    inject: true
   });
 });
 
 gulp.task('clean-dist', () => del(paths.dist));
-gulp.task('clean-tmp', () => del(paths.temp));
+// gulp.task('clean-tmp', () => del(paths.temp));
 
-gulp.task('clean', gulp.parallel('clean-dist', 'clean-tmp'));
-gulp.task('symlink', gulp.parallel('symlink-jspm', 'symlink-data'));
+gulp.task('clean', gulp.parallel('clean-dist'));
+gulp.task('symlink', gulp.parallel('symlink-data'));
 gulp.task('copy', gulp.parallel('resources', 'js', 'css', 'data', 'html'));
 
 gulp.task('build', gulp.series(
-  'clean',
+  'clean-dist',
   'copy',
-  // 'symlink',
-  'builder',
-  'bundles'
+  'symlink-data',
+  'jspm-builder'// ,
+  // 'bundles'
 ));
