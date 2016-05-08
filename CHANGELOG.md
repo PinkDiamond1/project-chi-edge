@@ -2,7 +2,11 @@ CHANGELOG
 =========
 
 ## HEAD (Unreleased)
-_(none)_
+* No longer using separateCSS with jspm.bundle
+* jspm 0.17
+* gulp 4.0
+* font-awesome
+* gulp build now builds directly in dist directory
 
 --------------------
 

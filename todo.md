@@ -11,4 +11,4 @@ _\( managed using [todo-md](https://github.com/Hypercubed/todo-md) \)_
 - [x] gulp 4.0
 - [ ] Angular 2
 - [ ] Bootstrap 4 (flexbox)
-- [ ] Replace bootstrap glyphs with font-awesome
+- [x] Replace bootstrap glyphs with font-awesome
