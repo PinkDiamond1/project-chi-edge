@@ -81,9 +81,6 @@
       "d3-svg-legend": "npm:d3-svg-legend@^1.5.0",
       "d3-tip": "github:Caged/d3-tip@0.6.7",
       "d3plus-text": "npm:d3plus-text@^0.3.0",
-      "deiva": "local:deiva@1.0.0-alpha",
-      "example": "local:example@1.0.0",
-      "fantom5": "local:fantom5@1.0.0",
       "font-awesome": "npm:font-awesome@^4.6.1",
       "html": "github:Hypercubed/systemjs-plugin-html@^0.0.8",
       "jquery": "npm:jquery@^2.1.4",
@@ -103,7 +100,6 @@
       "plugin-babel": "npm:systemjs-plugin-babel@^0.0.9"
     },
     "peerDependencies": {
-      "Inlet": "github:enjalot/Inlet@^0.1.8",
       "angular-intro.js": "npm:angular-intro.js@^2.0.1",
       "biojs-io-fasta": "npm:biojs-io-fasta@^0.1.15",
       "biojs-vis-example": "npm:biojs-vis-example@^0.1.4",
@@ -276,6 +272,14 @@
         },
         "map": {
           "_stream_transform": "readable-stream/transform"
+        }
+      },
+      "npm:d3@3.5.17": {
+        "meta": {
+          "d3.js": {
+            "exports": "d3",
+            "format": "global"
+          }
         }
       },
       "npm:font-awesome@4.6.1": {
