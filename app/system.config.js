@@ -20,10 +20,17 @@ SystemJS.config({
           }
         }
       }
+    },
+    "local:deiva@1.0.0-alpha": {
+      "map": {}
     }
   },
   map: {
-    "babel": "npm:babel-core@5.8.38"
+    "babel": "npm:babel-core@5.8.38",
+    "Inlet": "github:enjalot/Inlet@0.1.8",
+    "deiva": "local:deiva@1.0.0-alpha",
+    "example": "local:example@1.0.0",
+    "fantom5": "local:fantom5@1.0.0"
   }
 });
 
@@ -36,7 +43,6 @@ SystemJS.config({
   ],
   map: {
     "angular-intro.js": "npm:angular-intro.js@2.0.1",
-    "Inlet": "github:enjalot/Inlet@0.1.8",
     "biojs-io-fasta": "npm:biojs-io-fasta@0.1.15",
     "biojs-vis-example": "npm:biojs-vis-example@0.1.4",
     "chiasm": "npm:chiasm@0.3.0",
@@ -46,9 +52,6 @@ SystemJS.config({
     "chiasm-links": "npm:chiasm-links@0.2.3",
     "clipboard": "npm:clipboard@1.5.10",
     "crossfilter": "github:square/crossfilter@1.3.12",
-    "deiva": "local:deiva@1.0.0-alpha",
-    "example": "local:example@1.0.0",
-    "fantom5": "local:fantom5@1.0.0",
     "font-awesome": "npm:font-awesome@4.6.1",
     "FileSaver": "github:eligrey/FileSaver.js@master",
     "URIjs": "npm:URIjs@1.16.1",
@@ -129,11 +132,6 @@ SystemJS.config({
     "zlib": "github:jspm/nodelibs-zlib@0.2.0-alpha"
   },
   packages: {
-    "local:deiva@1.0.0-alpha": {
-      "map": {
-        "intro.js": "npm:intro.js@2.1.0"
-      }
-    },
     "npm:biojs-io-fasta@0.1.15": {
       "map": {
         "biojs-io-parser": "npm:biojs-io-parser@1.0.0",
