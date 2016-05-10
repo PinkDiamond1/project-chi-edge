@@ -9,8 +9,8 @@ import 'webcomponentsjs/webcomponents-lite.js';
 import 'core-js/shim';
 
 import 'jquery';
-import 'bootstrap/dist/js/bootstrap';
-import 'bootstrap/dist/css/bootstrap.css!';
+import 'bootstrap';
+import 'bootstrap/css/bootstrap.css!';
 
 import 'font-awesome/css/font-awesome.css!';
 

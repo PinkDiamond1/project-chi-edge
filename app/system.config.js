@@ -20,15 +20,11 @@ SystemJS.config({
           }
         }
       }
-    },
-    "local:deiva@1.0.0-alpha": {
-      "map": {}
     }
   },
   map: {
     "babel": "npm:babel-core@5.8.38",
     "Inlet": "github:enjalot/Inlet@0.1.8",
-    "deiva": "local:deiva@1.0.0-alpha",
     "example": "local:example@1.0.0",
     "fantom5": "local:fantom5@1.0.0"
   }
@@ -42,6 +38,9 @@ SystemJS.config({
     "local:*.json"
   ],
   map: {
+    "angularjs-slider": "github:angular-slider/angularjs-slider@2.13.0",
+    "deiva": "local:deiva@1.0.0-alpha",
+    "angular-ui-bootstrap": "npm:angular-ui-bootstrap@1.3.2",
     "angular-intro.js": "npm:angular-intro.js@2.0.1",
     "biojs-io-fasta": "npm:biojs-io-fasta@0.1.15",
     "biojs-vis-example": "npm:biojs-vis-example@0.1.4",
@@ -58,7 +57,6 @@ SystemJS.config({
     "_F": "github:Hypercubed/_F@0.0.11",
     "angular": "github:angular/bower-angular@1.5.5",
     "angular-animate": "github:angular/bower-angular-animate@1.5.5",
-    "angular-bootstrap": "github:angular-ui/bootstrap-bower@0.13.4",
     "angular-cookies": "github:angular/bower-angular-cookies@1.5.5",
     "angular-downloadsvg-directive": "npm:angular-downloadsvg-directive@0.1.5",
     "angular-growl": "npm:angular-growl-v2@0.7.5",
@@ -66,13 +64,11 @@ SystemJS.config({
     "angular-marked": "npm:angular-marked@1.2.0",
     "angular-route": "github:angular/bower-angular-route@1.5.5",
     "angular-sanitize": "github:angular/bower-angular-sanitize@1.5.5",
-    "angular-slider": "github:angular-slider/angularjs-slider@2.13.0",
-    "angular-ui/bootstrap-bower": "github:angular-ui/bootstrap-bower@0.13.4",
     "assert": "github:jspm/nodelibs-assert@0.2.0-alpha",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "babyparse": "npm:babyparse@0.4.5",
     "blobjs": "github:eligrey/Blob.js@master",
-    "bootstrap": "github:twbs/bootstrap@3.3.6",
+    "bootstrap": "github:twbs/bootstrap@4.0.0-alpha.2",
     "buffer": "github:jspm/nodelibs-buffer@0.2.0-alpha",
     "child_process": "github:jspm/nodelibs-child_process@0.2.0-alpha",
     "codemirror": "github:codemirror/codemirror@5.14.2",
@@ -132,6 +128,15 @@ SystemJS.config({
     "zlib": "github:jspm/nodelibs-zlib@0.2.0-alpha"
   },
   packages: {
+    "local:deiva@1.0.0-alpha": {
+      "map": {}
+    },
+    "github:twbs/bootstrap@4.0.0-alpha.2": {
+      "map": {
+        "jquery": "npm:jquery@2.2.3",
+        "tether": "github:HubSpot/tether@1.3.2"
+      }
+    },
     "npm:biojs-io-fasta@0.1.15": {
       "map": {
         "biojs-io-parser": "npm:biojs-io-parser@1.0.0",
@@ -248,11 +253,6 @@ SystemJS.config({
     "npm:d3plus-text@0.3.1": {
       "map": {
         "d3": "npm:d3@3.5.17"
-      }
-    },
-    "github:twbs/bootstrap@3.3.6": {
-      "map": {
-        "jquery": "npm:jquery@2.2.3"
       }
     },
     "github:Hypercubed/systemjs-plugin-html@0.0.8": {
@@ -699,9 +699,6 @@ SystemJS.config({
       "map": {
         "computed-styles": "npm:computed-styles@1.1.2"
       }
-    },
-    "npm:ui-select@0.16.1": {
-      "map": {}
     },
     "npm:url@0.11.0": {
       "map": {

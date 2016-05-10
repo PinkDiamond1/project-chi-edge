@@ -10,5 +10,6 @@ _\( managed using [todo-md](https://github.com/Hypercubed/todo-md) \)_
 - [x] jspm 0.17
 - [x] gulp 4.0
 - [ ] Angular 2
-- [ ] Bootstrap 4 (flexbox)
+- [x] Bootstrap 4 (flexbox)
 - [x] Replace bootstrap glyphs with font-awesome
+- [x] Update bootstrap-ui

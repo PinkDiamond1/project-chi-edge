@@ -7,6 +7,8 @@ CHANGELOG
 * gulp 4.0
 * font-awesome
 * gulp build now builds directly in dist directory
+* Bootstrap 4.0-alpha.2
+* angular-ui-bootstrap@^1.3.2
 
 --------------------
 
