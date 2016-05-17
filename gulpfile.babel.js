@@ -4,3 +4,4 @@
 import './gulp/tasks/build';
 import './gulp/tasks/server';
 import './gulp/tasks/deploy';
+import './gulp/tasks/jspm';

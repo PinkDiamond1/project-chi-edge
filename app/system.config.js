@@ -24,9 +24,7 @@ SystemJS.config({
   },
   map: {
     "babel": "npm:babel-core@5.8.38",
-    "Inlet": "github:enjalot/Inlet@0.1.8",
-    "example": "local:example@1.0.0",
-    "fantom5": "local:fantom5@1.0.0"
+    "Inlet": "github:enjalot/Inlet@0.1.8"
   }
 });
 
@@ -38,19 +36,30 @@ SystemJS.config({
     "local:*.json"
   ],
   map: {
-    "angularjs-slider": "github:angular-slider/angularjs-slider@2.13.0",
-    "deiva": "local:deiva@1.0.0-alpha",
-    "angular-ui-bootstrap": "npm:angular-ui-bootstrap@1.3.2",
     "angular-intro.js": "npm:angular-intro.js@2.0.1",
-    "biojs-io-fasta": "npm:biojs-io-fasta@0.1.15",
+    "angularjs-slider": "github:angular-slider/angularjs-slider@2.13.0",
+    "biojs-io-fasta": "npm:biojs-io-fasta@0.1.17",
     "biojs-vis-example": "npm:biojs-vis-example@0.1.4",
+    "buffer": "github:jspm/nodelibs-buffer@0.2.0-alpha",
     "chiasm": "npm:chiasm@0.3.0",
     "chiasm-charts": "npm:chiasm-charts@0.1.5",
     "chiasm-component": "npm:chiasm-component@0.2.3",
     "chiasm-layout": "npm:chiasm-layout@0.2.4",
     "chiasm-links": "npm:chiasm-links@0.2.3",
+    "child_process": "github:jspm/nodelibs-child_process@0.2.0-alpha",
     "clipboard": "npm:clipboard@1.5.10",
+    "constants": "github:jspm/nodelibs-constants@0.2.0-alpha",
     "crossfilter": "github:square/crossfilter@1.3.12",
+    "crypto": "github:jspm/nodelibs-crypto@0.2.0-alpha",
+    "d3": "npm:d3@3.5.17",
+    "d3-plugins": "github:d3/d3-plugins@master",
+    "d3-svg-legend": "npm:d3-svg-legend@1.10.0",
+    "d3-tip": "github:Caged/d3-tip@0.6.7",
+    "dgram": "github:jspm/nodelibs-dgram@0.2.0-alpha",
+    "dns": "github:jspm/nodelibs-dns@0.2.0-alpha",
+    "ecc-jsbn": "npm:ecc-jsbn@0.1.1",
+    "events": "github:jspm/nodelibs-events@0.2.0-alpha",
+    "angular-ui-bootstrap": "npm:angular-ui-bootstrap@1.3.2",
     "font-awesome": "npm:font-awesome@4.6.1",
     "FileSaver": "github:eligrey/FileSaver.js@master",
     "URIjs": "npm:URIjs@1.16.1",
@@ -69,24 +78,11 @@ SystemJS.config({
     "babyparse": "npm:babyparse@0.4.5",
     "blobjs": "github:eligrey/Blob.js@master",
     "bootstrap": "github:twbs/bootstrap@4.0.0-alpha.2",
-    "buffer": "github:jspm/nodelibs-buffer@0.2.0-alpha",
-    "child_process": "github:jspm/nodelibs-child_process@0.2.0-alpha",
     "codemirror": "github:codemirror/codemirror@5.14.2",
-    "constants": "github:jspm/nodelibs-constants@0.2.0-alpha",
     "core-decorators": "npm:core-decorators@0.9.2",
     "core-js": "npm:core-js@1.2.6",
     "crlf-helper": "npm:crlf-helper@0.1.0",
-    "crypto": "github:jspm/nodelibs-crypto@0.2.0-alpha",
     "css": "github:systemjs/plugin-css@0.1.21",
-    "d3": "npm:d3@3.5.17",
-    "d3-plugins": "github:d3/d3-plugins@master",
-    "d3-svg-legend": "npm:d3-svg-legend@1.10.0",
-    "d3-tip": "github:Caged/d3-tip@0.6.7",
-    "d3plus-text": "npm:d3plus-text@0.3.1",
-    "dgram": "github:jspm/nodelibs-dgram@0.2.0-alpha",
-    "dns": "github:jspm/nodelibs-dns@0.2.0-alpha",
-    "ecc-jsbn": "npm:ecc-jsbn@0.1.1",
-    "events": "github:jspm/nodelibs-events@0.2.0-alpha",
     "fs": "github:jspm/nodelibs-fs@0.2.0-alpha",
     "html": "github:Hypercubed/systemjs-plugin-html@0.0.8",
     "http": "github:jspm/nodelibs-http@0.2.0-alpha",
@@ -121,170 +117,12 @@ SystemJS.config({
     "url": "github:jspm/nodelibs-url@0.2.0-alpha",
     "util": "github:jspm/nodelibs-util@0.2.0-alpha",
     "venn": "npm:venn.js@0.2.9",
-    "venn.js": "npm:venn.js@0.2.9",
     "vm": "github:jspm/nodelibs-vm@0.2.0-alpha",
     "webcomponentsjs": "github:webcomponents/webcomponentsjs@0.7.22",
     "webtreemap": "github:martine/webtreemap@gh-pages",
     "zlib": "github:jspm/nodelibs-zlib@0.2.0-alpha"
   },
   packages: {
-    "local:deiva@1.0.0-alpha": {
-      "map": {}
-    },
-    "github:twbs/bootstrap@4.0.0-alpha.2": {
-      "map": {
-        "jquery": "npm:jquery@2.2.3",
-        "tether": "github:HubSpot/tether@1.3.2"
-      }
-    },
-    "npm:biojs-io-fasta@0.1.15": {
-      "map": {
-        "biojs-io-parser": "npm:biojs-io-parser@1.0.0",
-        "msa-seqtools": "npm:msa-seqtools@0.1.8"
-      }
-    },
-    "npm:biojs-io-parser@1.0.0": {
-      "map": {
-        "node-request": "npm:request@2.72.0",
-        "request": "npm:request@2.72.0",
-        "vow": "npm:vow@0.4.12",
-        "xhr": "npm:xhr@2.2.0"
-      }
-    },
-    "npm:biojs-vis-example@0.1.4": {
-      "map": {
-        "d3": "npm:d3@3.5.17"
-      }
-    },
-    "npm:bl@1.1.2": {
-      "map": {
-        "readable-stream": "npm:readable-stream@2.0.6"
-      }
-    },
-    "npm:boom@2.10.1": {
-      "map": {
-        "hoek": "npm:hoek@2.16.3"
-      }
-    },
-    "npm:chalk@1.1.3": {
-      "map": {
-        "ansi-styles": "npm:ansi-styles@2.2.1",
-        "escape-string-regexp": "npm:escape-string-regexp@1.0.5",
-        "has-ansi": "npm:has-ansi@2.0.0",
-        "strip-ansi": "npm:strip-ansi@3.0.1",
-        "supports-color": "npm:supports-color@2.0.0"
-      }
-    },
-    "npm:chiasm-charts@0.1.5": {
-      "map": {
-        "chiasm-component": "npm:chiasm-component@0.2.3",
-        "chiasm-dataset": "npm:chiasm-dataset@0.1.1",
-        "d3": "npm:d3@3.5.17",
-        "model-js": "npm:model-js@0.2.4"
-      }
-    },
-    "npm:chiasm-component@0.2.3": {
-      "map": {
-        "model-js": "npm:model-js@0.2.4"
-      }
-    },
-    "npm:chiasm-layout@0.2.4": {
-      "map": {
-        "chiasm-component": "npm:chiasm-component@0.2.3",
-        "d3": "npm:d3@3.5.17",
-        "lodash": "npm:lodash@3.10.1",
-        "model-js": "npm:model-js@0.2.4"
-      }
-    },
-    "npm:chiasm@0.3.0": {
-      "map": {
-        "es6-promise": "npm:es6-promise@3.1.2",
-        "lodash": "npm:lodash@3.10.1",
-        "model-js": "npm:model-js@0.2.4"
-      }
-    },
-    "npm:clipboard@1.5.10": {
-      "map": {
-        "good-listener": "npm:good-listener@1.1.7",
-        "select": "npm:select@1.0.6",
-        "tiny-emitter": "npm:tiny-emitter@1.0.2"
-      }
-    },
-    "npm:closest@0.0.1": {
-      "map": {
-        "matches-selector": "npm:matches-selector@0.0.1"
-      }
-    },
-    "npm:combined-stream@1.0.5": {
-      "map": {
-        "delayed-stream": "npm:delayed-stream@1.0.0"
-      }
-    },
-    "npm:commander@2.9.0": {
-      "map": {
-        "graceful-readlink": "npm:graceful-readlink@1.0.1"
-      }
-    },
-    "npm:cryptiles@2.0.5": {
-      "map": {
-        "boom": "npm:boom@2.10.1"
-      }
-    },
-    "npm:dashdash@1.13.1": {
-      "map": {
-        "assert-plus": "npm:assert-plus@1.0.0"
-      }
-    },
-    "npm:delegate@3.0.1": {
-      "map": {
-        "closest": "npm:closest@0.0.1"
-      }
-    },
-    "npm:font-awesome@4.6.1": {
-      "map": {
-        "css": "github:systemjs/plugin-css@0.1.21"
-      }
-    },
-    "npm:angular-marked@1.2.0": {
-      "map": {
-        "marked": "npm:marked@0.3.5"
-      }
-    },
-    "npm:d3plus-text@0.3.1": {
-      "map": {
-        "d3": "npm:d3@3.5.17"
-      }
-    },
-    "github:Hypercubed/systemjs-plugin-html@0.0.8": {
-      "map": {
-        "webcomponentsjs": "github:webcomponents/webcomponentsjs@0.7.22"
-      }
-    },
-    "github:angular/bower-angular-animate@1.5.5": {
-      "map": {
-        "angular": "github:angular/bower-angular@1.5.5"
-      }
-    },
-    "github:angular/bower-angular-cookies@1.5.5": {
-      "map": {
-        "angular": "github:angular/bower-angular@1.5.5"
-      }
-    },
-    "github:angular/bower-angular-route@1.5.5": {
-      "map": {
-        "angular": "github:angular/bower-angular@1.5.5"
-      }
-    },
-    "github:angular/bower-angular-sanitize@1.5.5": {
-      "map": {
-        "angular": "github:angular/bower-angular@1.5.5"
-      }
-    },
-    "github:guybedford/system-md@0.1.0": {
-      "map": {
-        "showdown": "github:showdownjs/showdown@1.3.0"
-      }
-    },
     "github:jspm/nodelibs-buffer@0.2.0-alpha": {
       "map": {
         "buffer-browserify": "npm:buffer@4.6.0"
@@ -325,9 +163,10 @@ SystemJS.config({
         "zlib-browserify": "npm:browserify-zlib@0.1.4"
       }
     },
-    "npm:angular-downloadsvg-directive@0.1.5": {
+    "github:twbs/bootstrap@4.0.0-alpha.2": {
       "map": {
-        "svgsaver": "npm:svgsaver@0.6.1"
+        "jquery": "npm:jquery@2.2.3",
+        "tether": "github:HubSpot/tether@1.3.2"
       }
     },
     "npm:asn1.js@4.6.0": {
@@ -337,8 +176,34 @@ SystemJS.config({
         "minimalistic-assert": "npm:minimalistic-assert@1.0.0"
       }
     },
-    "npm:babel-runtime@5.8.38": {
-      "map": {}
+    "npm:biojs-io-fasta@0.1.17": {
+      "map": {
+        "biojs-io-parser": "npm:biojs-io-parser@1.0.0",
+        "msa-seqtools": "npm:msa-seqtools@0.1.8"
+      }
+    },
+    "npm:biojs-io-parser@1.0.0": {
+      "map": {
+        "node-request": "npm:request@2.72.0",
+        "request": "npm:request@2.72.0",
+        "vow": "npm:vow@0.4.12",
+        "xhr": "npm:xhr@2.2.0"
+      }
+    },
+    "npm:biojs-vis-example@0.1.4": {
+      "map": {
+        "d3": "npm:d3@3.5.17"
+      }
+    },
+    "npm:bl@1.1.2": {
+      "map": {
+        "readable-stream": "npm:readable-stream@2.0.6"
+      }
+    },
+    "npm:boom@2.10.1": {
+      "map": {
+        "hoek": "npm:hoek@2.16.3"
+      }
     },
     "npm:browserify-aes@1.0.6": {
       "map": {
@@ -393,13 +258,69 @@ SystemJS.config({
         "isarray": "npm:isarray@1.0.0"
       }
     },
+    "npm:chalk@1.1.3": {
+      "map": {
+        "ansi-styles": "npm:ansi-styles@2.2.1",
+        "escape-string-regexp": "npm:escape-string-regexp@1.0.5",
+        "has-ansi": "npm:has-ansi@2.0.0",
+        "strip-ansi": "npm:strip-ansi@3.0.1",
+        "supports-color": "npm:supports-color@2.0.0"
+      }
+    },
+    "npm:chiasm-charts@0.1.5": {
+      "map": {
+        "chiasm-component": "npm:chiasm-component@0.2.3",
+        "chiasm-dataset": "npm:chiasm-dataset@0.1.1",
+        "d3": "npm:d3@3.5.17",
+        "model-js": "npm:model-js@0.2.5"
+      }
+    },
+    "npm:chiasm-component@0.2.3": {
+      "map": {
+        "model-js": "npm:model-js@0.2.5"
+      }
+    },
+    "npm:chiasm-layout@0.2.4": {
+      "map": {
+        "chiasm-component": "npm:chiasm-component@0.2.3",
+        "d3": "npm:d3@3.5.17",
+        "lodash": "npm:lodash@3.10.1",
+        "model-js": "npm:model-js@0.2.5"
+      }
+    },
+    "npm:chiasm@0.3.0": {
+      "map": {
+        "es6-promise": "npm:es6-promise@3.1.2",
+        "lodash": "npm:lodash@3.10.1",
+        "model-js": "npm:model-js@0.2.5"
+      }
+    },
     "npm:cipher-base@1.0.2": {
       "map": {
         "inherits": "npm:inherits@2.0.1"
       }
     },
-    "npm:core-js@1.2.6": {
-      "map": {}
+    "npm:clipboard@1.5.10": {
+      "map": {
+        "good-listener": "npm:good-listener@1.1.7",
+        "select": "npm:select@1.0.6",
+        "tiny-emitter": "npm:tiny-emitter@1.0.2"
+      }
+    },
+    "npm:closest@0.0.1": {
+      "map": {
+        "matches-selector": "npm:matches-selector@0.0.1"
+      }
+    },
+    "npm:combined-stream@1.0.5": {
+      "map": {
+        "delayed-stream": "npm:delayed-stream@1.0.0"
+      }
+    },
+    "npm:commander@2.9.0": {
+      "map": {
+        "graceful-readlink": "npm:graceful-readlink@1.0.1"
+      }
     },
     "npm:create-ecdh@4.0.0": {
       "map": {
@@ -421,6 +342,11 @@ SystemJS.config({
         "inherits": "npm:inherits@2.0.1"
       }
     },
+    "npm:cryptiles@2.0.5": {
+      "map": {
+        "boom": "npm:boom@2.10.1"
+      }
+    },
     "npm:crypto-browserify@3.11.0": {
       "map": {
         "browserify-cipher": "npm:browserify-cipher@1.0.0",
@@ -433,6 +359,16 @@ SystemJS.config({
         "pbkdf2": "npm:pbkdf2@3.0.4",
         "public-encrypt": "npm:public-encrypt@4.0.0",
         "randombytes": "npm:randombytes@2.0.3"
+      }
+    },
+    "npm:dashdash@1.13.1": {
+      "map": {
+        "assert-plus": "npm:assert-plus@1.0.0"
+      }
+    },
+    "npm:delegate@3.0.1": {
+      "map": {
+        "closest": "npm:closest@0.0.1"
       }
     },
     "npm:des.js@1.0.0": {
@@ -465,6 +401,57 @@ SystemJS.config({
       "map": {
         "create-hash": "npm:create-hash@1.1.2"
       }
+    },
+    "npm:font-awesome@4.6.1": {
+      "map": {
+        "css": "github:systemjs/plugin-css@0.1.21"
+      }
+    },
+    "npm:angular-marked@1.2.0": {
+      "map": {
+        "marked": "npm:marked@0.3.5"
+      }
+    },
+    "github:Hypercubed/systemjs-plugin-html@0.0.8": {
+      "map": {
+        "webcomponentsjs": "github:webcomponents/webcomponentsjs@0.7.22"
+      }
+    },
+    "github:angular/bower-angular-animate@1.5.5": {
+      "map": {
+        "angular": "github:angular/bower-angular@1.5.5"
+      }
+    },
+    "github:angular/bower-angular-cookies@1.5.5": {
+      "map": {
+        "angular": "github:angular/bower-angular@1.5.5"
+      }
+    },
+    "github:angular/bower-angular-route@1.5.5": {
+      "map": {
+        "angular": "github:angular/bower-angular@1.5.5"
+      }
+    },
+    "github:angular/bower-angular-sanitize@1.5.5": {
+      "map": {
+        "angular": "github:angular/bower-angular@1.5.5"
+      }
+    },
+    "github:guybedford/system-md@0.1.0": {
+      "map": {
+        "showdown": "github:showdownjs/showdown@1.3.0"
+      }
+    },
+    "npm:angular-downloadsvg-directive@0.1.5": {
+      "map": {
+        "svgsaver": "npm:svgsaver@0.6.1"
+      }
+    },
+    "npm:babel-runtime@5.8.38": {
+      "map": {}
+    },
+    "npm:core-js@1.2.6": {
+      "map": {}
     },
     "npm:for-each@0.3.2": {
       "map": {
@@ -532,9 +519,6 @@ SystemJS.config({
         "jsprim": "npm:jsprim@1.2.2",
         "sshpk": "npm:sshpk@1.8.3"
       }
-    },
-    "npm:inherits@2.0.1": {
-      "map": {}
     },
     "npm:is-my-json-valid@2.13.1": {
       "map": {

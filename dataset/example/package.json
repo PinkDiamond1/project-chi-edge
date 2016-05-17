@@ -4,6 +4,7 @@
   "jspm": {
     "name": "example",
     "peerDependencies": {
+      "d3": "npm:d3@^3.5.16",
       "assert": "github:jspm/nodelibs-assert@^0.2.0-alpha",
       "biojs-io-fasta": "npm:biojs-io-fasta@^0.1.15",
       "biojs-vis-example": "npm:biojs-vis-example@^0.1.4",
