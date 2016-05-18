@@ -4,6 +4,8 @@ Project χ (pronounced project /ˈ</span><span title="'k' in 'kind'">k</span><sp
 
 **Note: Project χ is experimental.  Many things will change.  If you are interested in this project or have issues please feel free to contact me.**
 
+**Note 2: This is the EDGE branch.  It is for testing new features in Project-χ.  It will never be merged into master**
+
 ## Features
 
 * Contains AngularJS services and directives for loading, parsing, and downloading tabular data and as well as downloading generated publication quality SVG images.
@@ -74,7 +76,7 @@ gulp dev
 
 ## Separation of template and dataset
 
-By default all content in the `app` directory will be served by the development server when running `gulp server` and built into the `dist` folder when running `gulp build`.  However, to encourage contribution back to the `project-χ` repository and enable using the same `project-χ` source across multiple projects the developer may put project specific resources and configuration into a separate directory.  This folder can then be served and built along with the `project-χ` core.  For example, if you create a `myProject` folder inside the `dataset` directory the following commands will work as indicated:
+By default all content in the `app` directory will be served by the development server when running `gulp server` and built into the `dist` folder when running `gulp build`.  However, to encourage contribution back to the `project-χ` repository and enable using the same `project-χ` source across multiple projects the developer may put project specific resources and configuration into a separate directory.  This folder can then be served and built along with the `project-χ` core.  For example, if you create a `extra` folder inside the `dataset` directory the following commands will work as indicated:
 
 * `gulp dev --dataset=./dataset/extra`
 
