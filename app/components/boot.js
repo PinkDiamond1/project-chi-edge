@@ -8,14 +8,15 @@ import 'webcomponentsjs/webcomponents-lite.js';
 /* Some older browsers need a shim */
 import 'core-js/shim';
 
-import 'jquery';
-import 'bootstrap';
+// import 'jquery';
+// import 'bootstrap';
 import 'bootstrap/css/bootstrap.css!';
-
 import 'font-awesome/css/font-awesome.css!';
 
 import angular from 'angular';
 import app from './app';
+
+import './test.ts';
 
 angular.element(document).ready(() => {
   angular.bootstrap(document.body, [app.name], {strictDi: true});

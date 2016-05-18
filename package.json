@@ -1,6 +1,6 @@
 {
   "name": "project-chi",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0-edge",
   "private": true,
   "repository": {
     "type": "git",
@@ -25,7 +25,6 @@
     "gulp-plumber": "^1.0.1",
     "hydrolysis": "1.21.4",
     "jspm": "^0.17.0-beta.14",
-    "vinyl-fs": "^2.4.3",
     "vulcanize": "1.14.8",
     "xo": "^0.14.0",
     "yargs": "^4.6.0"
@@ -82,6 +81,7 @@
       "md": "github:guybedford/system-md@^0.1.0",
       "mime-lookup": "npm:mime-lookup@^0.0.2",
       "text": "github:systemjs/plugin-text@^0.0.8",
+      "ts": "github:frankwallis/plugin-typescript@^4.0.16",
       "ui-codemirror": "github:angular-ui/ui-codemirror@^0.3.0",
       "ui-grid": "github:angular-ui/bower-ui-grid@^3.1.1",
       "webcomponentsjs": "github:webcomponents/webcomponentsjs@^0.7.7"
@@ -124,6 +124,7 @@
       "jsbn": "npm:jsbn@0.1",
       "model-js": "github:curran/model@^0.2.5",
       "net": "github:jspm/nodelibs-net@^0.2.0-alpha",
+      "os": "github:jspm/nodelibs-os@^0.2.0-alpha",
       "path": "github:jspm/nodelibs-path@^0.2.0-alpha",
       "polymer": "github:Polymer/polymer@^1.4.0",
       "process": "github:jspm/nodelibs-process@^0.2.0-alpha",
@@ -290,6 +291,17 @@
       },
       "npm:jquery@2.2.3": {
         "format": "amd"
+      },
+      "npm:typescript@1.8.10": {
+        "browser": {},
+        "map": {
+          "buffer": "@empty",
+          "child_process": "@empty",
+          "fs": "@empty",
+          "path": "@empty",
+          "process": "@empty",
+          "readline": "@empty"
+        }
       }
     }
   },

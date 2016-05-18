@@ -24,9 +24,9 @@ const config = {
     dataLink: `${dataSetPath}/app/data`,
     jspmLink: 'app/jspm_packages/',
     resources: [
-      'app/*.{js,json,ico,txt,md}',
+      'app/*.{js,ts,json,ico,txt,md}',
       'app/.nojekyll',
-      'app/{jspm_packages,lib}/*.{js,map}',
+      'app/{jspm_packages,lib}/*.{js,ts,map}',
       'app/{jspm_packages,lib}/**/*.{svg,png,eot,ttf,gif,wot,woff,woff2}',
       'app/{components,common,assets}/**/*.{png,svg,txt,md}',
       `${dataSetPath}/app/*.{json,ico,txt,md}`,
@@ -44,8 +44,8 @@ const config = {
     ],
     scripts: [
       `app/*.js`,
-      `app/{components,common}/**/*.js`,
-      `${dataSetPath}/app/{components,common}/**/*.js`
+      `app/{components,common}/**/*.{js,ts}`,
+      `${dataSetPath}/app/{components,common}/**/*.{js,ts}`
     ],
     styles: [
       `app/*.{css,css.map}`,

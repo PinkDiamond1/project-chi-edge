@@ -26,7 +26,6 @@ function controller () {
     };
 
     document.addEventListener(screenfull.raw.fullscreenchange, () => {
-      console.log('screenfull.raw.fullscreenerror');
       angular.element($map)[screenfull.isFullscreen ? 'addClass' : 'removeClass']('fullscreen');
       change();
     });

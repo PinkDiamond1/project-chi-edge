@@ -1,23 +1,26 @@
 SystemJS.config({
-  transpiler: "plugin-babel",
-  babelOptions: {
-    "optional": [
-      "runtime",
-      "optimisation.modules.system"
-    ]
+  transpiler: "ts",
+  typescriptOptions: {
+    module: "system",
+    noImplicitAny: false,
+    typeCheck: "strict",                // also accepts "strict"
+    tsconfig: true                  // also accepts a path
   },
   buildCSS: true,
   separateCSS: false,
   buildHTML: true,
   packages: {
-    "": {
-      "defaultJSExtensions": true,
+    ".": {
+      "defaultExtension": "js",
       "meta": {
         "*.md": {
           "loader": "md",
           "mdOptions": {
             "tables": true
           }
+        },
+        "*.ts": {
+          "loader": "ts"
         }
       }
     }
@@ -98,6 +101,7 @@ SystemJS.config({
     "mime-lookup": "npm:mime-lookup@0.0.2",
     "model-js": "github:curran/model@0.2.5",
     "net": "github:jspm/nodelibs-net@0.2.0-alpha",
+    "os": "github:jspm/nodelibs-os@0.2.0-alpha",
     "path": "github:jspm/nodelibs-path@0.2.0-alpha",
     "plugin-babel": "npm:systemjs-plugin-babel@0.0.9",
     "polymer": "github:Polymer/polymer@1.4.0",
@@ -109,6 +113,7 @@ SystemJS.config({
     "string_decoder": "github:jspm/nodelibs-string_decoder@0.2.0-alpha",
     "text": "github:systemjs/plugin-text@0.0.8",
     "tls": "github:jspm/nodelibs-tls@0.2.0-alpha",
+    "ts": "github:frankwallis/plugin-typescript@4.0.16",
     "tty": "github:jspm/nodelibs-tty@0.2.0-alpha",
     "tweetnacl": "npm:tweetnacl@0.13.3",
     "ui-codemirror": "github:angular-ui/ui-codemirror@0.3.0",
@@ -123,6 +128,11 @@ SystemJS.config({
     "zlib": "github:jspm/nodelibs-zlib@0.2.0-alpha"
   },
   packages: {
+    "github:frankwallis/plugin-typescript@4.0.16": {
+      "map": {
+        "typescript": "npm:typescript@1.8.10"
+      }
+    },
     "github:jspm/nodelibs-buffer@0.2.0-alpha": {
       "map": {
         "buffer-browserify": "npm:buffer@4.6.0"
@@ -136,6 +146,11 @@ SystemJS.config({
     "github:jspm/nodelibs-http@0.2.0-alpha": {
       "map": {
         "http-browserify": "npm:stream-http@2.3.0"
+      }
+    },
+    "github:jspm/nodelibs-os@0.2.0-alpha": {
+      "map": {
+        "os-browserify": "npm:os-browserify@0.2.1"
       }
     },
     "github:jspm/nodelibs-punycode@0.2.0-alpha": {
